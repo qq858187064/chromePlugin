@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,              // manifest版本号
+    "name": "plugin name",               // 插件名
+    "version": "1.0",                   // 插件版本
+    "description": "plugin description",  // 插件描述
+	"permissions":[
+	"contextMenus",
+	"notifications"
+	],
+    "icons": {                          // 插件图标，Chrome给我们提供了3种大小图标（128*128、48*48、16*16），只要你提供的图片的大小大于这3种即可 
+        "128": "img/test.png",
+        "48": "img/test.png",
+        "16": "img/test.png"
+    },
+    "action": {                 // 在浏览器中执行时
+        "default_icon": "img/test.png", // 默认图标
+        "default_popup": "popup.html"   // 点击图标时弹出界面
+    },
+	"options_page": "options.html",
+	   "background": {
+    "service_worker": "js/background.js"
+  },
+  	"content_scripts":[{
+		"js":["js/content.js"],
+		"matches":["http://*/*", "https://*/*"],
+		"run_at":"document_end"
+	}]
+	
+}
