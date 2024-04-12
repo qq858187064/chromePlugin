@@ -7,23 +7,19 @@ function g(id){
 function getIpt(){
 var ipt=g("ipt"),
 invert=g("invert"),
-filt=g("filt");
+filt=g("filt"),
+invertFilt=g("invertFilt");
 
-filt.onclick=invert.onclick=function(e){
+filt.onclick
+=invert.onclick
+=invertFilt.onclick
+=function(e){
 
  var e = e || window.event,
                t = e.target || e.toElement,
-			   cmd;
-			   
-			   if(t.id=="invert")
-				   cmd=1;
-			   else if(t.id=="filt")
-				   cmd=ipt.value;
+			   cmd={id:t.id,arg:ipt.value};
 			   
 			   send(cmd)
-
-
-//send();
 }
 
 
