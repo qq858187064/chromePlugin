@@ -1,6 +1,11 @@
+
+/*
+
+http://it.wonhero.com/itdoc/Post/2023/0228/97FB1AED0941A80A
+https://chrome.cenchy.com/content_scripts.html
+https://zhuanlan.zhihu.com/p/445653175
+*/
 window.addEventListener("DOMContentLoaded",getIpt);
-
-
 function g(id){
 	return document.getElementById(id);
 }
@@ -8,11 +13,15 @@ function getIpt(){
 var ipt=g("ipt"),
 invert=g("invert"),
 filt=g("filt"),
-invertFilt=g("invertFilt");
+invertFilt=g("invertFilt"),
+voice=g("voice");
+
 
 filt.onclick
 =invert.onclick
 =invertFilt.onclick
+=voice.onclick
+=filtvoice.onclick
 =function(e){
 
  var e = e || window.event,
