@@ -49,7 +49,7 @@ function filt(cmd){
 		 bd=document.body;
 		
 		bd.innerText="";
-		bd.style="padding: 2em 3em;background-image: none;";
+		bd.style="padding: 2em 3em;background-image: none!important;background-color: #fff!important;";
 		bd.appendChild(ct);	
 		ct.style="font-size:1.5em!important";
 }
